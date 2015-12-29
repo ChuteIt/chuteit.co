@@ -34,21 +34,39 @@
 <li><strong>Make it easier for you to create with the content you own</strong>.</li>
 <li><strong>Never take away your rights to the content you create</strong>.</li>
 </ul>
-<p>By using an S3 bucket, <em>you</em> retain <em>clear</em> ownership of your content. At any point, revoke access to <strong>Chute It</strong> if you feel your rights or privacy are infringed on by <strong>Chute It</strong>.</p>
-<p>The projects built from the content managed by <strong>Chute It</strong> are always available from the S3 bucket and are, therefore, not affected if <strong>Chute It</strong> is disabled or down.</p>
-<p>If you want to use <strong>Chute It</strong>&#39;s power but don&#39;t want to bother with S3 at all, we have an option just for you. You data is obviously stored on <strong>Chute It</strong> servers but you still own your content. It just may be a little more difficult to access/export if you were to decide to leave <strong>Chute It</strong> one day.</p>
+<h3 id="managing-your-content">Managing your content</h3>
+<p><strong>Chute It</strong> manages content with four concepts.</p>
+<ul>
+<li>A simple yet robust data structure.</li>
+<li>Content has a RESTful API.</li>
+<li>Hooks have a RESTful API.</li>
+<li>Content is stored in a separate environment.</li>
+</ul>
+<p>With these concepts abstracted with a useful and simple interface, you could do pretty much anything with your content.</p>
+<h3 id="storing-your-content">Storing your content</h3>
+<p><strong>Chute It</strong> uses Amazon Web Services S3 to store incoming content.  The bucket that <strong>Chute It</strong> uses is up to you. You set up the bucket and grant <strong>Chute It</strong> access.</p>
+<p>Using the <strong>Chute It</strong> web app or the <strong>Chute It</strong> API, you could manipulate your content in any way you desire.</p>
+<p>When content is changed or created, webhooks are triggered allowing you to automate other processes based on how the content changed.</p>
+<h3 id="it-is-always-your-content">It is always <em>your</em> content</h3>
+<p>By using an S3 bucket, <em>you</em> retain ownership of your content. If, at any point, you feel your rights or privacy are infringed on, simply revoke access to <strong>Chute It</strong>. Your content stays where it is, but now <strong>Chute It</strong> can&#39;t touch it.</p>
+<h3 id="simplicity">Simplicity</h3>
+<p>The goal is to give you full control over your content. If you&#39;re willing to allow <strong>Chute It</strong> to manage your content a little more (but never sacrificing your ownership over your content), <strong>Chute It</strong> will store content locally.</p>
+<blockquote>
+<p>Don&#39;t worry, we still keep content in S3 buckets which means we could always transfer the bucket over to your management.</p>
+</blockquote>
+<p><strong>Chute It</strong> also maintains a few common automation webhooks as well.</p>
 </section>
           <h2 class="section-title" id="assets">Assets</h2>
-          <section class="content-section assets-section"><p><strong>Chute It</strong> has three main parts:</p>
+          <section class="content-section assets-section"><p><strong>Chute It</strong>&#39;s data structure has three main parts:</p>
 <ul>
 <li>Containers</li>
-<li>Assets</li>
+<li>Collections</li>
 <li>Content</li>
 </ul>
 <h3 id="containers">Containers</h3>
 <p>Containers are discrete groups of content. Containers can have many various entries of content. The content can either be collected in an array or individually within the container.</p>
-<h3 id="assets">Assets</h3>
-<p>Assets are collections of individual pieces of content. Assets are part of a container.</p>
+<h3 id="collections">Collections</h3>
+<p>Collections are lists or groups of individual pieces of content. Collections are part of a container.</p>
 <h3 id="content">Content</h3>
 <p>Content is a file of a specific type:</p>
 <ul>
