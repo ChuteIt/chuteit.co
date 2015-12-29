@@ -1,0 +1,42 @@
+{
+  "home": {
+    "markdown": "index.md"
+  },
+  "sections": [
+    {
+      "title": "Goals",
+      "id": "goals",
+      "showInNav": true,
+      "markdown": "goals.md"
+    },
+    {
+      "title": "Assets",
+      "id": "assets",
+      "showInNav": true,
+      "markdown": "parts.md"
+    },
+    {
+      "title": "Hooks",
+      "id": "hooks",
+      "showInNav": true,
+      "markdown": "hooks.md"
+    },
+    {
+      "title": "APIs",
+      "id": "apis",
+      "showInNav": true,
+      "markdown": "apis.md"
+    },
+    {
+      "title": "Contact",
+      "id": "contact",
+      "showInNav": true,
+      "markdown": "contact.md"
+    },
+    {
+      "title": "License",
+      "id": "license",
+      "markdown": "license.md"
+    }
+  ]
+}

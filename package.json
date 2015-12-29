@@ -1,0 +1,24 @@
+{
+  "name": "chuteit.co",
+  "version": "1.0.0",
+  "description": "Chuteit.co website",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js",
+    "develop": "npm run build && http-server dist -p 8080 -c-1 -o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guamaso/chuteit.co.git"
+  },
+  "author": "Juan Orozco <hi@juanorozco.com> (http://juanorozco.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guamaso/chuteit.co/issues"
+  },
+  "homepage": "https://github.com/Guamaso/chuteit.co#readme",
+  "devDependencies": {
+    "plain-static": "^1.4.0"
+  }
+}

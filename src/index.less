@@ -1,0 +1,139 @@
+@color-white: #E9E9E9;
+@color-trim: #BCBCBC;
+@color-dark: #424242;
+@color-brand: #F77420;
+@color-active: #3299BB;
+
+@content-width: 600px;
+@content-font-size: 16px;
+
+body, ul, li, p, span, div, img, h1, h2, h3, h4, h5, a {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+body {
+  background-color: @color-brand;
+  color: @color-dark;
+  font-family: 'Roboto Slab', serif;
+  font-size: @content-font-size;
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+  }
+
+  a, a:active, a:visited, a:hover {
+    color: @color-active;
+    text-decoration: none;
+  }
+  a:hover {
+    color: @color-brand;
+  }
+
+  p {
+    margin: 1rem 0 1rem 0.5rem;
+    line-height: 1.5rem;
+  }
+
+  .container {
+    background-color: @color-white;
+    border-left: 10px solid @color-trim;
+    border-right: 10px solid @color-trim;
+    width: @content-width;
+    margin: 0 auto;
+    padding: 1rem;
+
+    header {
+      .site-nav {
+        text-align: center;
+        border-bottom: 1px dashed @color-trim;
+        border-top: 1px dashed @color-trim;
+        ul {
+          list-style-type: none;
+          li {
+            display: inline;
+            padding: 0 1.2rem;
+            .nav-link {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .content-section {
+      margin: 0 1rem 5rem 1rem;
+
+      &.main-section {
+        margin: 2rem 0 6rem 0;
+        font-size: 1.4rem;
+        font-weight: 100;
+        p {
+          line-height: 3rem;
+        }
+      }
+
+      ul {
+        margin: 1rem 0 1rem 1rem;
+        li {
+          margin: 0 0 0 1rem;
+        }
+      }
+    }
+
+    .site-title, .section-title {
+      padding: 1px 5px;
+      text-align: center;
+    }
+
+    .section-title {
+      border-bottom: 1px dashed @color-trim;
+    }
+
+    .site-title {
+      font-size: 5rem;
+    }
+    code {
+      border: 1px solid @color-dark;
+      border-radius: 0.5rem;
+      padding: 1px 7px;
+      background-color: @color-trim;
+      word-wrap: break-word;
+    }
+
+    .license-section {
+      text-align: center;
+    }
+
+    .contact-iframe {
+      width: 560px;
+      height: 900px;
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 700px) {
+  body {
+    .container {
+      width: 90%;
+
+      .contact-iframe {
+        width: 300px;
+        height: 900px;
+      }
+    }
+  }
+
+}
