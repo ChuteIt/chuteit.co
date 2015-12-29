@@ -1,0 +1,125 @@
+body,
+ul,
+li,
+p,
+span,
+div,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+body {
+  background-color: #F77420;
+  color: #424242;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5 {
+  font-family: 'Raleway', sans-serif;
+}
+body h2 {
+  font-size: 2.5rem;
+}
+body h3 {
+  font-size: 1.7rem;
+}
+body a,
+body a:active,
+body a:visited,
+body a:hover {
+  color: #3299BB;
+  text-decoration: none;
+}
+body a:hover {
+  color: #F77420;
+}
+body p {
+  margin: 1rem 0 1rem 0.5rem;
+  line-height: 1.5rem;
+}
+body .container {
+  background-color: #E9E9E9;
+  border-left: 10px solid #BCBCBC;
+  border-right: 10px solid #BCBCBC;
+  width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+body .container header .site-nav {
+  text-align: center;
+  border-bottom: 1px dashed #BCBCBC;
+  border-top: 1px dashed #BCBCBC;
+}
+body .container header .site-nav ul {
+  list-style-type: none;
+}
+body .container header .site-nav ul li {
+  display: inline;
+  padding: 0 1.2rem;
+}
+body .container header .site-nav ul li .nav-link {
+  font-size: 1.5rem;
+}
+body .container .content-section {
+  margin: 0 1rem 5rem 1rem;
+}
+body .container .content-section.main-section {
+  margin: 2rem 0 6rem 0;
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+body .container .content-section.main-section p {
+  line-height: 3rem;
+}
+body .container .content-section ul {
+  margin: 1rem 0 1rem 1rem;
+}
+body .container .content-section ul li {
+  margin: 0 0 0 1rem;
+}
+body .container .site-title,
+body .container .section-title {
+  padding: 1px 5px;
+  text-align: center;
+}
+body .container .section-title {
+  border-bottom: 1px dashed #BCBCBC;
+}
+body .container .site-title {
+  font-size: 5rem;
+}
+body .container code {
+  border: 1px solid #424242;
+  border-radius: 0.5rem;
+  padding: 1px 7px;
+  background-color: #BCBCBC;
+  word-wrap: break-word;
+}
+body .container .license-section {
+  text-align: center;
+}
+body .container .contact-iframe {
+  width: 560px;
+  height: 900px;
+}
+@media screen and (max-width: 700px) {
+  body .container {
+    width: 90%;
+  }
+  body .container .contact-iframe {
+    width: 300px;
+    height: 900px;
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Chute It</title>
+    <link href="index.css" rel="stylesheet" type='text/css'>
+    <meta name="Description" content="Chute It is a web service that manages content and allows users to listen on changes to do other things with their content.">
+    <meta name="viewport" content="user-scalable=no,width=device-width">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="site-title">Chute it!</h1>
+        <nav class="site-nav">
+          <ul>
+            <li><a class="nav-link" href="#goals">Goals</a></li>
+            <li><a class="nav-link" href="#assets">Assets</a></li>
+            <li><a class="nav-link" href="#hooks">Hooks</a></li>
+            <li><a class="nav-link" href="#apis">APIs</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <article>
+        <section class="content-section main-section"><p><strong>Chute It</strong> manages <a href="#assets">assets</a>, not content.</p>
+<p><strong>Chute It</strong> lets you <a href="#hooks">hook</a> into asset changes.</p>
+<p><strong>Chute It</strong> doesn&#39;t want/take rights to your content. <a href="#goals">EVER</a>.</p>
+</section>
+          <h2 class="section-title" id="goals">Goals</h2>
+          <section class="content-section goals-section"><p><strong>Chute It</strong>&#39;s goal is to</p>
+<ul>
+<li><strong>Provide a framework that manages the content for all your projects</strong>.</li>
+<li><strong>Make it easier for you to create with the content you own</strong>.</li>
+<li><strong>Never take away your rights to the content you create</strong>.</li>
+</ul>
+<p>By using an S3 bucket, <em>you</em> retain <em>clear</em> ownership of your content. At any point, revoke access to <strong>Chute It</strong> if you feel your rights or privacy are infringed on by <strong>Chute It</strong>.</p>
+<p>The projects built from the content managed by <strong>Chute It</strong> are always available from the S3 bucket and are, therefore, not affected if <strong>Chute It</strong> is disabled or down.</p>
+<p>If you want to use <strong>Chute It</strong>&#39;s power but don&#39;t want to bother with S3 at all, we have an option just for you. You data is obviously stored on <strong>Chute It</strong> servers but you still own your content. It just may be a little more difficult to access/export if you were to decide to leave <strong>Chute It</strong> one day.</p>
+</section>
+          <h2 class="section-title" id="assets">Assets</h2>
+          <section class="content-section assets-section"><p><strong>Chute It</strong> has three main parts:</p>
+<ul>
+<li>Containers</li>
+<li>Assets</li>
+<li>Content</li>
+</ul>
+<h3 id="containers">Containers</h3>
+<p>Containers are discrete groups of content. Containers can have many various entries of content. The content can either be collected in an array or individually within the container.</p>
+<h3 id="assets">Assets</h3>
+<p>Assets are collections of individual pieces of content. Assets are part of a container.</p>
+<h3 id="content">Content</h3>
+<p>Content is a file of a specific type:</p>
+<ul>
+<li>Text</li>
+<li>Image</li>
+<li>Audio</li>
+<li>Video</li>
+</ul>
+<p>Other file types can be used but Chute It gives the above types more visual importance.</p>
+<p>Content can also have custom <strong>meta data</strong> like <code>publish_date</code> or <code>publish_user</code>.</p>
+<p><strong>Tags</strong> are similar to meta data but can be used in hooks.</p>
+</section>
+          <h2 class="section-title" id="hooks">Hooks</h2>
+          <section class="content-section hooks-section"><p>When a container is affected, an event is triggered.  Events are passed to hooks, if registered.</p>
+<p>This allows you to automate a website, for example. Since the assets live in an S3 bucket, you could do the following:</p>
+<p>Assuming you created some Mustache templates in Chute It, let&#39;s say the container name is <code>juanorozco/templates</code> and has a piece of text content with the name <code>photoblog.mustache</code>.</p>
+<ul>
+<li>Create a new asset in the <code>juanorozco/photoblog</code> container.<ul>
+<li>Add an image to the asset, name it <code>dog.jpg</code>.</li>
+<li>Add text and name it <code>dog.md</code>.</li>
+</ul>
+</li>
+<li>Change event is triggered. Chute It locates a registered hook that matches the criteria (<code>tag:photoblog</code>, <code>contentType:image</code>, <code>eventType:any</code>)</li>
+<li>Hook is called with event details</li>
+<li>Registered hook script is a static site generator script...<ul>
+<li>Gets templates at <code>juanorozco/templates/photoblog.mustache</code></li>
+<li>Gets content stored at <code>juanorozco/photoblog</code></li>
+<li>Process images, resizes them, etc.</li>
+<li>Gets text asset content and compiles markdown content</li>
+<li>Builds site from processed data</li>
+<li>Deploys site to production server</li>
+<li>Hook returns success</li>
+</ul>
+</li>
+<li>Chute It logs the hook call and finishes the transaction.</li>
+</ul>
+</section>
+          <h2 class="section-title" id="apis">APIs</h2>
+          <section class="content-section apis-section"><p>Proposed APIs. More details coming soon.</p>
+<h3 id="hooks">Hooks</h3>
+<ul>
+<li>Register a hook</li>
+<li>Delete a hook</li>
+<li>Get all my registered hooks</li>
+</ul>
+<h3 id="hook-logs">Hook logs</h3>
+<ul>
+<li>Get hook logs</li>
+</ul>
+<h3 id="assets">Assets</h3>
+<ul>
+<li>Find Assets</li>
+<li>Get an asset by ID</li>
+<li>Store an asset</li>
+</ul>
+</section>
+          <h2 class="section-title" id="contact">Contact</h2>
+          <section class="content-section contact-section"><p>Want to learn more?</p>
+<iframe src="https://docs.google.com/forms/d/1r5d_CiqHwsQQvUOvoIVXkkmHCkxFwHjJdTyP4xkUmjI/viewform?embedded=true#start=embed" class="contact-iframe" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+</section>
+          <h2 class="section-title" id="license">License</h2>
+          <section class="content-section license-section"><p><a class="cc-license" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+</section>
+      </article>
+    </div>
+  </body>
+</html>
