@@ -1,5 +1,5 @@
 // Options
-var opts = {};
+var opts = {files: 'CNAME'};
 // Require and init
 var plainStatic = require('plain-static')(opts);
 
